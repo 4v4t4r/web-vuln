@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 # If you are having problems connecting to the MySQL database and all of the variables below are correct
@@ -94,5 +93,3 @@ $_DVWA[ 'default_phpids_level' ] = 'disabled';
 $_DVWA[ 'default_phpids_verbose' ] = 'false';
 
 ?>
-
->>>>>>> b41cf51209886e1fa0380a189f7b5a1918a9fc2c
