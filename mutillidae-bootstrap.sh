@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
-
 
 ## More instructions found at https://sourceforge.net/projects/mutillidae/files/documentation/ (08/03/2017)
 
@@ -12,7 +10,7 @@ cd /etc/nginx/sites-available && cat ./tmp >> ./default && rm ./tmp
 mysql -u root -e "CREATE DATABASE mutillidae;"
 if [[ ! -d "/var/www/mutillidae" ]]; then mkdir -p /var/www/mutillidae; chown -R www-data. /var/www/mutillidae; fi
 cd /var/www/mutillidae && git clone git://git.code.sf.net/p/mutillidae/git && chown -R www-data. ./ && cp -r git/* . && rm -rf git
-=======
+
 apt-get install --yes apache2 apache2-utils php-pear php-mcrypt php-gd php-curl
 /etc/init.d/apache2 stop
 
@@ -28,4 +26,3 @@ cd /etc/apache2/mods-enabled && ln -s ../mods-available/dir.conf dir.conf
 mysql -u root -p"p@ssw0rd" -e "CREATE DATABASE mutillidae;"
 if [[ ! -d "/var/www/html" ]]; then mkdir -p /var/www; ln -s /usr/share/nginx/html /var/www/html; chown -R www-data. /var/www/html; fi
 cd /var/www/ && git clone git://git.code.sf.net/p/mutillidae/git mutillidae && chown -R www-data. ./mutillidae && chmod 777 ./mutillidae
->>>>>>> b41cf51209886e1fa0380a189f7b5a1918a9fc2c

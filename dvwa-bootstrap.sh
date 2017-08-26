@@ -1,20 +1,13 @@
 #!/usr/bin/env bash
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password p@ssw0rd'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password p@ssw0rd'
-<<<<<<< HEAD
 echo -e "vagrant\nvagrant" | sudo passwd ubuntu
-=======
->>>>>>> b41cf51209886e1fa0380a189f7b5a1918a9fc2c
 apt-get update
 apt-get install --yes mariadb-server mariadb-client
 add-apt-repository -y ppa:nginx/stable
 apt-get update
 apt-get install --yes nginx
-<<<<<<< HEAD
 apt-get install --yes php-cli php-common php-mysql php-gd php-fpm php-cgi php-fpm php-pear php-mcrypt php-mbstring php-curl vim git
-=======
-apt-get install --yes php-cli php-common php-mysql php-gd php-fpm php-cgi php-fpm php-pear php-mcrypt vim git
->>>>>>> b41cf51209886e1fa0380a189f7b5a1918a9fc2c
 apt-get -f install --yes
 /etc/init.d/nginx stop
 /etc/init.d/php7.0-fpm stop
@@ -37,11 +30,7 @@ cat << 'EOF' > /etc/nginx/sites-enabled/default
 server
 {
     listen  80;
-<<<<<<< HEAD
     root /var/www/dvwa;
-=======
-    root /var/www/html;
->>>>>>> b41cf51209886e1fa0380a189f7b5a1918a9fc2c
     index index.php index.html index.htm;
     #server_name localhost
     location "/"
@@ -66,11 +55,6 @@ mysql -u root -p"p@ssw0rd" -e "CREATE DATABASE dvwa;"
 mysql -u root -p"p@ssw0rd" -e "USE mysql; UPDATE user set plugin='' WHERE User='root'; FLUSH privileges;"
 if [[ ! -d "/var/www/html" ]]; then mkdir -p /var/www; ln -s /usr/share/nginx/html /var/www/html; chown -R www-data. /var/www/html; fi
 rm /var/www/html/*.html
-<<<<<<< HEAD
 cd /var/www/html && git clone https://github.com/RandomStorm/DVWA.git && chown -R www-data. ./ && mv ./DVWA/* . && rm -rf ./DVWA && chmod 777 ./hackable/uploads/; chmod 777 ./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt
 cd /var/www && mv ./html ./dvwa && chown -R www-data. ./dvwa
 cd /var/www/dvwa/config && cp /vagrant/resources/config.inc.php . && chown -R www-data. ./
-=======
-cd /var/www/html && git clone https://github.com/RandomStorm/DVWA.git && chown -R www-data. ./ && mv ./DVWA/* . && chmod 777 ./hackable/uploads/; chmod 777 ./external/phpids/0.6/lib/IDS/tmp/phpids_log.txt
-cd /var/www/html/config && cp /vagrant/resources/config.inc.php . && chown -R www-data. ./
->>>>>>> b41cf51209886e1fa0380a189f7b5a1918a9fc2c
