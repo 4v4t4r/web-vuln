@@ -1,7 +1,7 @@
 # Web-Vuln
 
 ***
-Web-Vuln is an intentionally vulnerable virtualbox image DVWA, Mutillidae 2, and WebGoat pre-installed on a LEMP stack. The virtual machine is provisioned using ````Vagrant````, hence pre-requisites to Web-Vuln are [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html). In addition, installing the `vagrant-reload` and `vagrant-vbguest` must be installed through vagrant.
+Web-Vuln is an intentionally vulnerable virtualbox image DVWA, Mutillidae 2, and WebGoat pre-installed on a LEMP stack. The virtual machine is provisioned using ````Vagrant````, hence pre-requisites to Web-Vuln are [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html). In addition, `vagrant-reload` and `vagrant-vbguest` plugins should be installed through vagrant.
 
 ### Pre-requisites
 * Virtualbox: https://www.vagrantup.com/downloads.html
