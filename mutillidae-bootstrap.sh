@@ -23,6 +23,3 @@ cd /etc/apache2/mods-enabled && ln -s ../mods-available/dir.conf dir.conf
 /etc/init.d/mysql restart
 /etc/init.d/php7.0-fpm restart
 /etc/init.d/apache2 restart
-mysql -u root -p"p@ssw0rd" -e "CREATE DATABASE mutillidae;"
-if [[ ! -d "/var/www/html" ]]; then mkdir -p /var/www; ln -s /usr/share/nginx/html /var/www/html; chown -R www-data. /var/www/html; fi
-cd /var/www/ && git clone git://git.code.sf.net/p/mutillidae/git mutillidae && chown -R www-data. ./mutillidae && chmod 777 ./mutillidae
