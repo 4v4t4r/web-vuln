@@ -9,14 +9,14 @@ Vagrant.configure("2") do |config|
 	config.vm.box_url = ''
 	config.vm.network "private_network", type: "dhcp"
 	
-    config.vm.define :dvwa do |dvwa|
+    config.vm.define :web-vuln do |web-vuln|
 		dvwa.vm.provider :virtualbox do |v|
 			v.name = "web-vuln"
 			v.customize ["modifyvm", :id, "--memory", "1024", "--cpus", 2]
 		end
-		dvwa.vm.hostname = "web-vuln"
-		dvwa.vm.provision :shell, :path => "dvwa-bootstrap.sh"
-		dvwa.vm.provision :shell, :path => "mutillidae-bootstrap.sh"
-		dvwa.vm.provision :shell, :path => "webgoat-bootstrap.sh"
+		web-vuln.vm.hostname = "web-vuln"
+		web-vuln.vm.provision :shell, :path => "dvwa-bootstrap.sh"
+		web-vuln.vm.provision :shell, :path => "mutillidae-bootstrap.sh"
+		web-vuln.vm.provision :shell, :path => "webgoat-bootstrap.sh"
 	end
 end
