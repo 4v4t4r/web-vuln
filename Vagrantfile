@@ -5,8 +5,8 @@
 Vagrant.configure("2") do |config|
 
 ## VM configuration
-	config.vm.box = 'ubuntu/xenial64'
-	config.vm.box_url = ''
+	config.vm.box = "ubuntu/xenial64"
+	config.vm.box_url = "https://vagrantcloud.com/ubuntu/xenial64"
 	config.vm.network "private_network", type: "dhcp"
 	
     config.vm.define :vuln do |vuln|
