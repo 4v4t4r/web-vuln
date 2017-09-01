@@ -9,7 +9,7 @@ Web-Vuln is an intentionally vulnerable virtualbox image DVWA, Mutillidae 2, and
   - Plugins: `vagrant-reload` and `vagrant-vbguest`
 
 ### Limitations
-The current version is only tested on a Linux host and have not been tested on a Windows host (yet!). Barring no errors, an ubuntu based cli virtualbox with hostname `web-vuln` will be provisioned with three intentionally vulnerable web applications. Note: `web-vuln` does not have a GUI interface (and is not intended to be used in that manner either).
+Barring no errors, an ubuntu based cli virtualbox with hostname `web-vuln` will be provisioned with three intentionally vulnerable web applications. Note: `web-vuln` does not have a GUI interface (and is not intended to be used in that manner either). The provision has been successfully tested on both Linux and Windows 10 (through PowerShell) hosts and may also work on a Mac out of the book (not tested).
 
 ### Warning
 Do not expose this virtual machine on public interfaces. By default, two interfaces, a `nat` interface on the 10.0.2/24 subnet and a `host-only` interface on 172.28.128/24 subnet are enabled during the provisioning. The `nat` interface is strictly used during provision for bootstrapping purposes and can be (and highly recommended) to be disabled through virtualbox afterwards.
