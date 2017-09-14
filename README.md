@@ -19,6 +19,7 @@ Once the pre-requisites are met, clone the repository and type `vagrant up`. The
 
 ### Default ports
 * DVWA: 80
+  * admin/password
 * Mutillidae: 8088 -- Click the `setup/reset the DB` link at the top of the page to initialize the database
 * WebGoat: 8080/WebGoat
 > example: Visit 172.28.128.5:8080/WebGoat from the host computer to visit the WebGoat interface.
