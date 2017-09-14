@@ -7,6 +7,7 @@ Web-Vuln is an intentionally vulnerable virtualbox image DVWA, Mutillidae 2, and
 * Virtualbox: https://www.vagrantup.com/downloads.html
 * Vagrant: https://www.vagrantup.com/downloads.html
   - Plugins: `vagrant-reload` and `vagrant-vbguest`
+* CAPTCHA keys for DVWA Insecure CAPTCHA module. See Installation below.
 
 ### Limitations
 Barring no errors, an ubuntu based cli virtualbox with hostname `web-vuln` will be provisioned with three intentionally vulnerable web applications. Note: `web-vuln` does not have a GUI interface (and is not intended to be used in that manner either). The provision has been successfully tested on both Linux and Windows 10 (through PowerShell) hosts and may also work on a Mac out of the book (not tested).
@@ -16,6 +17,8 @@ Do not expose this virtual machine on public interfaces. By default, two interfa
 
 ### Installation
 Once the pre-requisites are met, clone the repository and type `vagrant up`. The default username:password combination is `ubuntu:vagrant`, if necessary. The intention is to interact with the vulnerable web applications through a web browser on the virtualbox host, thus there isn't (and shouldn't) be a need to specifically login. 
+
+In order to enable the DVWA Insecure CAPTCHA module, you will need to generate your own keys at https://www.google.com/recaptcha/admin/create and paste those keys in `resources/config.inc.php` at lines `29` and `30`.
 
 ### Default ports
 * DVWA: 80
